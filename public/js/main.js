@@ -110,6 +110,23 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     serviceButtons.forEach(button => {
+        const urlParams = new URLSearchParams(window.location.search);
+const selectedServiceId = urlParams.get("service");
+
+if (selectedServiceId) {
+    const selectedButton = document.querySelector(`.service-btn[data-id="${selectedServiceId}"]`);
+
+    if (selectedButton) {
+        selectedButton.click();
+
+        setTimeout(() => {
+            selectedButton.scrollIntoView({
+                behavior: "smooth",
+                block: "center"
+            });
+        }, 300);
+    }
+}
         button.addEventListener("click", function () {
             serviceButtons.forEach(btn => btn.classList.remove("active"));
             this.classList.add("active");

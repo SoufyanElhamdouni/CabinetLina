@@ -115,7 +115,7 @@
                                 @endif
                             </div>
 
-                            <a href="{{ url('/reservation') }}" class="btn btn-gold w-100">
+                            <a href="{{ url('/reservation?service='.$service->id) }}" class="btn btn-gold w-100">
                                 Réserver ce soin →
                             </a>
                         </div>

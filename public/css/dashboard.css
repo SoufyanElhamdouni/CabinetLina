@@ -1,0 +1,352 @@
+.admin-box {
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
+    text-align: center;
+    border: 1px solid #a87522;
+}
+
+.admin-table {
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
+}
+
+.admin-layout {
+    display: grid;
+    grid-template-columns: 270px 1fr;
+    min-height: 100vh;
+    background: #fff3e5;
+}
+
+.admin-sidebar {
+    background: #fffaf3;
+    border-right: 1px solid #e3cda8;
+    padding: 45px 35px;
+}
+
+.admin-sidebar h2 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 22px;
+    color: #2f2117;
+    margin-bottom: 8px;
+}
+
+.admin-sidebar p {
+    color: #a87522;
+    letter-spacing: 6px;
+    font-size: 11px;
+    margin-bottom: 55px;
+}
+
+.admin-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.admin-menu a {
+    text-decoration: none;
+    color: #6f5f53;
+    padding: 10px 20px;
+    border-radius: 32px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.admin-menu a.active,
+.admin-menu a:hover {
+    background: #a87522;
+    color: white;
+}
+
+.admin-main {
+    background: linear-gradient(135deg, #fff8ef, #f3dfc5);
+}
+
+.admin-page-title {
+    padding: 20px 35px 20px;
+    border-bottom: 1px solid #e3cda8;
+    background: rgba(255, 250, 243, 0.7);
+}
+
+.admin-page-title p {
+    color: #a87522;
+    letter-spacing: 7px;
+    font-weight: 600;
+    margin-bottom: 7px;
+}
+
+.admin-page-title h1 {
+    font-size: 40px;
+    color: #2f2117;
+    margin-bottom: 7px;
+}
+
+.admin-page-title span {
+    color: #6f5f53;
+    font-size: 15px;
+}
+
+.admin-content {
+    padding: 55px 60px;
+}
+
+.admin-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 28px;
+    margin-bottom: 35px;
+}
+
+.admin-stat-card {
+    background: #fffaf3;
+    border: 1px solid #e3cda8;
+    border-radius: 28px;
+    padding: 20px 20px 10px;
+    min-height: auto;
+    box-shadow: 0 18px 45px rgba(56, 36, 23, 0.08);
+}
+
+.stat-icon {
+    color: #a87522;
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.admin-stat-card h3 {
+    font-family: Arial, sans-serif;
+    font-size: 35px;
+    font-weight: 800;
+    color: #111;
+    margin: 0;
+}
+
+.admin-stat-card p {
+    color: #6f5f53;
+    font-size: 15px;
+    margin-top: 8px;
+}
+
+.admin-table-card {
+    background: #fffaf3;
+    border: 1px solid #e3cda8;
+    border-radius: 28px;
+    padding: 20px 20px 10px;
+    box-shadow: 0 18px 45px rgba(56, 36, 23, 0.08);
+}
+
+.admin-table-card h2 {
+    font-size: 25px;
+    margin-bottom: 20px;
+    color: #a87522;
+}
+
+.status-badge {
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-weight: 800;
+    font-size: 13px;
+}
+
+.status-badge.pending {
+    background: #f1d39c;
+    color: #5b3a12;
+}
+
+.status-badge.accepted {
+    background: #5ca46a;
+    color: white;
+}
+
+.status-badge.completed {
+    background: #a87522;
+    color: white;
+}
+
+@media (max-width: 1000px) {
+    .admin-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-stats-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.admin-table-card .table>:not(caption)>*>* {
+    padding: 1rem .5rem;
+    background: #fffaf3;
+}
+
+.admin-actions {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.admin-actions form {
+    margin: 0;
+}
+
+.admin-actions button {
+    border: 1px solid #e3cda8;
+    background: #fff8ef;
+    color: #2f2117;
+    border-radius: 20px;
+    padding: 8px 14px;
+    font-weight: 700;
+    font-size: 13px;
+}
+
+.admin-actions button:hover {
+    background: #f3dfc5;
+}
+
+.admin-actions .complete {
+    background: #a87522;
+    color: white;
+}
+
+.status-badge.refused {
+    background: #d9534f;
+    color: white;
+}
+
+.status-badge.cancelled {
+    background: #6f5f53;
+    color: white;
+}
+
+.admin-service-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff8ef;
+    border: 1px solid #e3cda8;
+    border-radius: 22px;
+    padding: 15px 18px;
+    margin-bottom: 12px;
+}
+
+.admin-service-item strong {
+    color: #2f2117;
+    font-size: 17px;
+}
+
+.admin-service-item p {
+    margin: 3px 0 0;
+    color: #6f5f53;
+}
+
+.btn-delete {
+    background: #d9534f;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 15px;
+    font-weight: 700;
+}
+
+.btn-admin-save {
+    background: linear-gradient(135deg, #d0a24c, #a87522);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 13px;
+    font-weight: 800;
+}
+
+.admin-table-card {
+    background: #fffaf3;
+    border: 1px solid #e3cda8;
+    border-radius: 28px;
+    padding: 30px;
+    box-shadow: 0 18px 45px rgba(56, 36, 23, 0.08);
+}
+
+.admin-table-card .form-control{
+    background-color: #FFF8EF;
+    border: 1px solid #e3cda8;
+}
+
+.btn-edit {
+    background: #fffaf3;
+    color: #2f2117;
+    border: 1px solid #e3cda8;
+    border-radius: 20px;
+    padding: 8px 15px;
+    font-weight: 700;
+    margin-right: 8px;
+}
+
+.btn-logout {
+    background: #fffaf3;
+    border: 1px solid #e3cda8;
+    border-radius: 25px;
+    padding: 12px;
+    font-weight: 700;
+    color: #2f2117;
+}
+
+.btn-logout:hover {
+    background: #a87522;
+    color: white;
+}
+
+.admin-sidebar {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.admin-menu {
+    flex: 1;
+}
+
+.logout-form {
+    margin-top: auto;
+    position: sticky;
+    bottom: 10px;
+}
+
+.admin-table-card table small {
+    font-size: 13px;
+    color: #6f5f53 !important;
+}
+
+.appointment-filters {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.filter-btn {
+    border: 1px solid #e3cda8;
+    background: #fff8ef;
+    color: #2f2117;
+    border-radius: 30px;
+    padding: 10px 18px;
+    font-weight: 800;
+}
+
+.filter-btn span {
+    background: #f3dfc5;
+    color: #a87522;
+    padding: 3px 9px;
+    border-radius: 20px;
+    margin-left: 6px;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+    background: #a87522;
+    color: white;
+}
+
+.filter-btn.active span,
+.filter-btn:hover span {
+    background: white;
+    color: #a87522;
+}

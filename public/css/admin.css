@@ -1,0 +1,75 @@
+.admin-section {
+    background: linear-gradient(135deg, #fff8ef, #f3dfc5);
+    padding: 60px 150px;
+}
+
+.admin-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: white;
+    border-radius: 28px;
+    overflow: hidden;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.1);
+}
+
+/* LEFT */
+.admin-left {
+    background: linear-gradient(135deg, #a87522, #d0a24c);
+    color: white;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.admin-left h2 {
+    font-size: 36px;
+    margin-top: 20px;
+}
+
+.admin-left p {
+    margin-top: 15px;
+    opacity: 0.9;
+}
+
+/* RIGHT */
+.admin-right {
+    padding: 60px;
+}
+
+.admin-right h3 {
+    font-size: 30px;
+    color: #382417;
+}
+
+
+.admin-subtitle {
+    color: #6f5f53;
+    margin-bottom: 25px;
+}
+
+/* INPUT */
+.admin-right input {
+    border-radius: 30px;
+    padding: 12px;
+    margin-top: 10px;
+}
+
+/* BUTTON */
+.btn-admin {
+    background: linear-gradient(135deg, #a87522, #d0a24c);
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 30px;
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .admin-card {
+        grid-template-columns: 1fr;
+    }
+}
+

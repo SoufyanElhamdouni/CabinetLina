@@ -1,0 +1,183 @@
+.booking-hero {
+    background: linear-gradient(135deg, #fff8ef, #f3dfc5);
+    padding: 80px 0;
+}
+
+.booking-section {
+    padding: 60px 0;
+    background: #fffaf3;
+}
+
+.booking-steps {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 22px;
+    margin-bottom: 35px;
+}
+
+.step-box {
+    display: flex;
+    background: white;
+    border: 0.5px #a87522 solid;
+    border-radius: 26px;
+    padding: 20px;
+    box-shadow: 0 18px 35px rgba(56, 36, 23, 0.06);
+}
+
+.step-box span {
+    width: 35px;
+    height: 35px;
+    background: #a87522;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 20px;
+}
+
+.step-box h3 {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    margin: 10px;
+}
+
+@media (max-width: 768px) {
+    .booking-steps {
+        grid-template-columns: 1fr;
+    }
+}
+
+.booking-card {
+    background: white;
+    border-radius: 20px;
+    padding: 25px;
+    margin-bottom: 20px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.05);
+    border: 0.5px #a87522 solid;
+}
+
+.booking-card h4 {
+    margin-bottom: 25px;
+}
+
+.service-select {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 10px;
+}
+
+.service-btn {
+    border: 0.1px #a87522 solid;
+    padding: 12px;
+    border-radius: 12px;
+    background: white;
+    text-align: left;
+    font-size: 20px;
+}
+
+.service-btn.active {
+    background: #e5c18b;
+}
+
+.service-btn span{
+    font-size: 13px;
+    color: oklch(0.255 0.035 61);
+    font-weight: 100;
+}
+
+.time-slots {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+}
+
+.time-slots button {
+    padding: 10px;
+    border-radius: 10px;
+    border: 0.5px #a87522 solid;
+    background: white;
+}
+
+.time-slots .active {
+    background: #a87522;
+    color: white;
+}
+
+.service-btn,
+.time-slots button {
+    cursor: pointer;
+}
+
+.btn-confirm {
+    background: #a87522;
+    color: white;
+    padding: 14px;
+    border-radius: 30px;
+    border: none;
+}
+
+.booking-summary {
+    background: white;
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 100px;
+    border: 0.5px #a87522 solid;
+}
+
+.booking-summary h5 {
+    color: #96691E;
+}
+
+.booking-summary ul {
+    list-style: none;
+    padding: 0;
+}
+
+.booking-summary li {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #e3cda8;
+    padding: 16px 0;
+}
+
+.form-control{
+    border-radius: 10px;
+    border: 1px #a87522 solid;
+}
+
+.sub-service-select {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+}
+
+.sub-service-btn {
+    border: 0.5px #a87522 solid;
+    padding: 14px;
+    border-radius: 14px;
+    background: white;
+    text-align: left;
+    font-size: 17px;
+}
+
+.sub-service-btn.active {
+    background: #e5c18b;
+}
+
+.sub-service-btn span {
+    display: block;
+    font-size: 13px;
+    color: #6f5f53;
+    margin-top: 6px;
+}
+
+@media (max-width: 768px) {
+    .sub-service-select {
+        grid-template-columns: 1fr;
+    }
+}

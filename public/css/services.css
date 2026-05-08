@@ -1,0 +1,25 @@
+.services-page-hero {
+    background: linear-gradient(135deg, #fff8ef, #f3dfc5);
+    padding: 90px 0 80px;
+}
+
+.services-page-hero h1 {
+    font-size: 52px;
+    max-width: 760px;
+    color: var(--brown);
+    line-height: 1.15;
+}
+
+.services-page-hero p {
+    max-width: 760px;
+    color: var(--muted);
+    font-size: 17px;
+    line-height: 1.8;
+    margin-top: 25px;
+}
+
+.services-list-section {
+    background: #fffaf3;
+    padding: 70px 0 90px;
+    border-bottom: 4px solid var(--gold);
+}

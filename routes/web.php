@@ -110,5 +110,10 @@ Route::middleware('auth')->group(function () {
         Route::post('/admin/users', [AdminController::class, 'storeUser']);
 
         Route::delete('/admin/users/{id}', [AdminController::class, 'deleteUser']);
+
+        Route::post('/admin/sub-services', [AdminController::class, 'storeSubService']);
+
+        Route::put('/admin/sub-services/{id}', [AdminController::class, 'updateSubService']);
+        Route::delete('/admin/sub-services/{id}', [AdminController::class, 'deleteSubService']);
     });
 });

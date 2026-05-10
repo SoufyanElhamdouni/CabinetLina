@@ -37,7 +37,7 @@
                                 <small>⏱ {{ $service->duration_minutes }} min</small>
 
                                 @if($service->subServices->count() > 0)
-                                    <small>À partir de {{ $service->subServices->min('price') }} DH</small>
+                                    <small>À partir de {{ number_format($service->subServices->min('price'), 0, ',', ' ') }} DH</small>
                                 @endif
                             </div>
 

@@ -350,3 +350,35 @@
     background: white;
     color: #a87522;
 }
+
+.admin-service-item {
+    cursor: pointer;
+}
+
+.admin-subservices-list {
+    background: #fff8ef;
+    border: 1px solid #e3cda8;
+    border-radius: 18px;
+    padding: 12px 18px;
+    margin: -10px 0 30px 0px;
+}
+
+.admin-subservice-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #ead8bc;
+}
+
+.admin-subservice-row:last-child {
+    border-bottom: none;
+}
+
+.admin-subservice-row span {
+    color: #2f2117;
+    font-weight: 600;
+}
+
+.admin-subservice-row strong {
+    color: #a87522;
+}

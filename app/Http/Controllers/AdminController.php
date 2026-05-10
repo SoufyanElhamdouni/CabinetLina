@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Availability;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
+use App\Models\SubService;
 class AdminController extends Controller
 {
     public function dashboard()
@@ -45,8 +46,53 @@ class AdminController extends Controller
 
     public function services()
 {
-    $services = Service::latest()->get();
+    $services = Service::with('subServices')->latest()->get();
     return view('admin.services', compact('services'));
+}
+
+public function storeSubService(Request $request)
+{
+    $request->validate([
+        'service_id' => 'required|exists:services,id',
+        'name' => 'required|string|max:255',
+        'duration_minutes' => 'required|integer',
+        'price' => 'required|numeric',
+    ]);
+
+    SubService::create([
+        'service_id' => $request->service_id,
+        'name' => $request->name,
+        'duration_minutes' => $request->duration_minutes,
+        'price' => $request->price,
+    ]);
+
+    return back()->with('success', 'Sous-service ajouté avec succès.');
+}
+
+public function updateSubService(Request $request, $id)
+{
+    $request->validate([
+        'name' => 'required|string|max:255',
+        'duration_minutes' => 'required|integer',
+        'price' => 'required|numeric',
+    ]);
+
+    $subService = SubService::findOrFail($id);
+
+    $subService->update([
+        'name' => $request->name,
+        'duration_minutes' => $request->duration_minutes,
+        'price' => $request->price,
+    ]);
+
+    return back()->with('success', 'Sous-service modifié avec succès.');
+}
+
+public function deleteSubService($id)
+{
+    SubService::findOrFail($id)->delete();
+
+    return back()->with('success', 'Sous-service supprimé avec succès.');
 }
 
 public function updateService(Request $request, $id)

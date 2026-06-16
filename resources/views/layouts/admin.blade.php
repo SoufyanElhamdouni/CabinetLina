@@ -48,7 +48,7 @@
         <form method="POST" action="{{ url('/admin/logout') }}" class="logout-form">
             @csrf
             <button class="btn-logout w-100">
-                <i class="fa fa-sign-out" aria-hidden="true"></i> Logout
+                <i class="fa fa-sign-out" aria-hidden="true"></i> Se Déconnecter
             </button>
         </form>
     </aside>

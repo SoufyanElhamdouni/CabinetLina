@@ -6,11 +6,10 @@
     <div class="container">
         <p class="section-small-title">RÉSERVATION</p>
 
-        <h1>Réservez votre rendez-vous en quatre étapes</h1>
+        <h1>Réservez votre rendez-vous en cinq étapes</h1>
 
         <p>
-            Prototype frontend clair: choix du soin, date,
-            créneau disponible et informations cliente.
+            Simple et rapide : choisissez votre soin, sélectionnez la date et le créneau, puis renseignez vos informations.
         </p>
     </div>
 </section>

@@ -111,34 +111,34 @@
     </button>
 
     <button class="filter-btn" data-filter="pending">
-        Pending <span>{{ $reservations->where('status', 'pending')->count() }}</span>
+        En attente <span>{{ $reservations->where('status', 'pending')->count() }}</span>
     </button>
 
     <button class="filter-btn" data-filter="accepted">
-        Accepted <span>{{ $reservations->where('status', 'accepted')->count() }}</span>
+        Acceptés <span>{{ $reservations->where('status', 'accepted')->count() }}</span>
     </button>
 
     <button class="filter-btn" data-filter="completed">
-        Completed <span>{{ $reservations->where('status', 'completed')->count() }}</span>
+        Terminés <span>{{ $reservations->where('status', 'completed')->count() }}</span>
     </button>
 
     <button class="filter-btn" data-filter="refused">
-        Refused <span>{{ $reservations->where('status', 'refused')->count() }}</span>
+        Refusés <span>{{ $reservations->where('status', 'refused')->count() }}</span>
     </button>
 
     <button class="filter-btn" data-filter="cancelled">
-        Cancelled <span>{{ $reservations->where('status', 'cancelled')->count() }}</span>
+        Annulés <span>{{ $reservations->where('status', 'cancelled')->count() }}</span>
     </button>
 </div>
         <table class="table align-middle">
             <thead>
                 <tr>
-                    <th>Client name</th>
+                    <th>Nom du client</th>
                     <th>Contact</th>
                     <th>Service</th>
                     <th>Date</th>
-                    <th>Time</th>
-                    <th>Status</th>
+                    <th>Heure</th>
+                    <th>Statut</th>
                     <th>Actions</th>
                 </tr>
             </thead>
@@ -175,22 +175,22 @@
                             <div class="admin-actions">
                                 <form method="POST" action="{{ url('/admin/appointments/'.$r->id.'/accepted') }}">
                                     @csrf
-                                    <button>Accept</button>
+                                    <button>Accepter</button>
                                 </form>
 
                                 <form method="POST" action="{{ url('/admin/appointments/'.$r->id.'/refused') }}">
                                     @csrf
-                                    <button>Refuse</button>
+                                    <button>Refuser</button>
                                 </form>
 
                                 <form method="POST" action="{{ url('/admin/appointments/'.$r->id.'/cancelled') }}">
                                     @csrf
-                                    <button>Cancel</button>
+                                    <button>Annuler</button>
                                 </form>
 
                                 <form method="POST" action="{{ url('/admin/appointments/'.$r->id.'/completed') }}">
                                     @csrf
-                                    <button class="complete">Complete</button>
+                                    <button class="complete">Terminer</button>
                                 </form>
                             </div>
                         </td>

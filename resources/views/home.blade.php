@@ -16,7 +16,7 @@
 
                 <p class="hero-text">
                     Une expérience beauté élégante et professionnelle pour réserver vos soins
-                    laser diode, HydraFacial, visage, blanchiment dentaire en quelques étapes.
+                    laser diode, hydrafacial, visage, blanchiment dentaire en quelques étapes.
                 </p>
 
                 <div class="hero-buttons">

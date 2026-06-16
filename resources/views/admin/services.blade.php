@@ -18,7 +18,7 @@
 
         <div class="col-lg-6">
             <div class="admin-table-card">
-                <h2>List services</h2>
+                <h2>Liste des services</h2>
 
                 @foreach($services as $service)
 
@@ -42,13 +42,13 @@
                             <button type="button" class="btn-edit"
                                     data-bs-toggle="modal"
                                     data-bs-target="#editService{{ $service->id }}">
-                                <i class="fa-solid fa-pencil"></i> Edit
+                                <i class="fa-solid fa-pencil"></i> Modifier
                             </button>
 
                             <form method="POST" action="{{ url('/admin/services/'.$service->id) }}" style="display:inline;">
                                 @csrf
                                 @method('DELETE')
-                                <button class="btn-delete">Delete</button>
+                                <button class="btn-delete">Supprimer</button>
                             </form>
                         </div>
                     </div>
@@ -67,13 +67,13 @@
                                     <button type="button" class="btn-edit"
                                             data-bs-toggle="modal"
                                             data-bs-target="#editSubService{{ $sub->id }}">
-                                        Edit
+                                        Modifier
                                     </button>
 
                                     <form method="POST" action="{{ url('/admin/sub-services/'.$sub->id) }}" style="display:inline;">
                                         @csrf
                                         @method('DELETE')
-                                        <button class="btn-delete">Delete</button>
+                                        <button class="btn-delete">Supprimer</button>
                                     </form>
                                 </div>
                             </div>
@@ -144,7 +144,7 @@
 
         <div class="col-lg-6">
             <div class="admin-table-card">
-                <h2>Add service form</h2>
+                <h2>Ajouter un service</h2>
 
                 <form method="POST" action="{{ url('/admin/services') }}">
                     @csrf
@@ -161,7 +161,7 @@
                 </form>
 
                 <div class="admin-table-card mt-4">
-                    <h2>Add sous-service form</h2>
+                    <h2>Ajouter un sous-service</h2>
 
                     <form method="POST" action="{{ url('/admin/sub-services') }}">
                         @csrf

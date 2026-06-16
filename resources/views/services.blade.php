@@ -9,8 +9,7 @@
         <h1>Des soins esthétiques présentés avec élégance</h1>
 
         <p>
-            Chaque carte contient les informations essentielles demandées pour un projet PFE:
-            image, titre, description, durée, prix placeholder et bouton de réservation.
+            Chaque soin est présenté de manière détaillée pour vous guider dans votre choix. Vous y trouverez un descriptif complet , la durée de la prestation , ainsi que le tarif, avec la possibilité de réserver votre séance en un clic.
         </p>
     </div>
 </section>

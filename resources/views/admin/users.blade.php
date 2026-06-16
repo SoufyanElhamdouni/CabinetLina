@@ -51,7 +51,7 @@
                                         <form method="POST" action="{{ url('/admin/users/'.$user->id) }}" style="display:inline;">
                                             @csrf
                                             @method('DELETE')
-                                            <button class="btn-delete">Delete</button>
+                                            <button class="btn-delete">Supprimer</button>
                                         </form>
                                     @endif
                                 </td>
@@ -65,7 +65,7 @@
 
         <div class="col-lg-5">
             <div class="admin-table-card sticky-card">
-                <h2>Add user form</h2>
+                <h2>Ajouter un utilisateur</h2>
 
                 <form method="POST" action="{{ url('/admin/users') }}">
                     @csrf
@@ -81,7 +81,7 @@
 
                     <label class="form-label">Rôle</label>
                     <select name="role" class="form-control mb-3" required>
-                        <option value="staff">Staff</option>
+                        <option value="staff">équipe</option>
                         <option value="super_admin">Super Admin</option>
                     </select>
 

@@ -26,7 +26,7 @@
                             <th>Jour</th>
                             <th>Début</th>
                             <th>Fin</th>
-                            <th>Action</th>
+                            <th>Actions</th>
                         </tr>
                     </thead>
 
@@ -40,7 +40,7 @@
                                     <form method="POST" action="{{ url('/admin/availability/'.$availability->id) }}">
                                         @csrf
                                         @method('DELETE')
-                                        <button class="btn-delete">Delete</button>
+                                        <button class="btn-delete">Supprimer</button>
                                     </form>
                                 </td>
                             </tr>
@@ -60,7 +60,7 @@
 
         <div class="col-lg-5">
             <div class="admin-table-card sticky-card">
-                <h2>Add availability form</h2>
+                <h2>Ajouter une disponibilité</h2>
 
                 <form method="POST" action="{{ url('/admin/availability') }}">
                     @csrf

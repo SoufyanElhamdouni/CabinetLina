@@ -15,37 +15,37 @@
         <div class="admin-stat-card">
             <div class="stat-icon"><i class="fa-regular fa-calendar-check"></i></div>
             <h3>{{ $total }}</h3>
-            <p>Total appointments</p>
+            <p>Total des rendez-vous</p>
         </div>
 
         <div class="admin-stat-card">
             <div class="stat-icon"><i class="fa-regular fa-hourglass"></i></div>
             <h3>{{ $pending }}</h3>
-            <p>Pending appointments</p>
+            <p>Rendez-vous en attente</p>
         </div>
 
         <div class="admin-stat-card">
             <div class="stat-icon"><i class="fa-regular fa-circle-check"></i></div>
             <h3>{{ $accepted }}</h3>
-            <p>Accepted appointments</p>
+            <p>Rendez-vous acceptés</p>
         </div>
 
         <div class="admin-stat-card">
             <div class="stat-icon"><i class="fa-solid fa-list-check"></i></div>
             <h3>{{ $completed }}</h3>
-            <p>Completed appointments</p>
+            <p>Rendez-vous terminés</p>
         </div>
 
         <div class="admin-stat-card">
             <div class="stat-icon"><i class="fa-regular fa-money-bill-1"></i></div>
             <h3>{{ number_format($revenue, 0, ',', ' ') }} MAD</h3>
-            <p>Revenue estimate</p>
+            <p>Revenu estimé</p>
         </div>
 
     </div>
 
     <div class="admin-table-card">
-        <h2>Recent appointments table</h2>
+        <h2>Tableau des rendez-vous récents</h2>
 
         <table class="table align-middle">
             <thead>
@@ -55,7 +55,7 @@
                     <th>Service</th>
                     <th>Date</th>
                     <th>Heure</th>
-                    <th>Status</th>
+                    <th>Statut</th>
                 </tr>
             </thead>
 

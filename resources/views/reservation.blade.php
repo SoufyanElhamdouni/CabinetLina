@@ -103,26 +103,41 @@
 
                         <div class="row g-3">
                             <div class="col-md-6">
-                                <input type="text"
-                                       name="client_name"
-                                       placeholder="Nom complet"
-                                       class="form-control"
-                                       required>
+                                <input 
+                                    type="text" 
+                                    name="client_name" 
+                                    placeholder="Nom complet" 
+                                    class="form-control"
+                                    pattern="^[A-Za-zÀ-ÿ\s'-]+$"
+                                    title="Le nom doit contenir uniquement des lettres."
+                                    required
+                                >
                             </div>
 
                             <div class="col-md-6">
-                                <input type="text"
-                                       name="phone"
-                                       placeholder="Téléphone"
-                                       class="form-control"
-                                       required>
+                                <input 
+                                    type="tel" 
+                                    name="phone" 
+                                    placeholder="Téléphone" 
+                                    class="form-control"
+                                    pattern="^[0-9]{10}$"
+                                    maxlength="10"
+                                    inputmode="numeric"
+                                    title="Le téléphone doit contenir exactement 10 chiffres."
+                                    required
+                                >
                             </div>
 
                             <div class="col-12">
-                                <input type="email"
-                                       name="email"
-                                       placeholder="Email"
-                                       class="form-control">
+                                <input 
+                                    type="email" 
+                                    name="email" 
+                                    placeholder="Email" 
+                                    class="form-control"
+                                    pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$"
+                                    title="Veuillez saisir un email valide sans espaces."
+                                    required
+                                >
                             </div>
                         </div>
 
@@ -182,6 +197,26 @@
 </section>
 <script>
     window.servicesData = @json($services);
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const nameInput = document.querySelector('input[name="client_name"]');
+    const phoneInput = document.querySelector('input[name="phone"]');
+    const emailInput = document.querySelector('input[name="email"]');
+
+    nameInput.addEventListener("input", function () {
+        this.value = this.value.replace(/[0-9]/g, "");
+    });
+
+    phoneInput.addEventListener("input", function () {
+        this.value = this.value.replace(/[^0-9]/g, "").slice(0, 10);
+    });
+
+    emailInput.addEventListener("input", function () {
+        this.value = this.value.replace(/\s/g, "");
+    });
+});
 </script>
 
 @endsection
